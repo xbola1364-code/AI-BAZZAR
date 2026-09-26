@@ -1,0 +1,93 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #f4f7fe;
+  color: #0f172a;
+}
+
+/* Real-time Ticker */
+.ticker-wrap {
+  width: 100%;
+  background-color: #070d1e;
+  color: #ffffff;
+  overflow: hidden;
+  height: 38px;
+  line-height: 38px;
+  font-size: 13px;
+  white-space: nowrap;
+  border-bottom: 1px solid #1e293b;
+}
+
+.ticker {
+  display: inline-block;
+  padding-left: 100%;
+  animation: marquee 38s linear infinite;
+}
+
+.ticker:hover {
+  animation-play-state: paused;
+}
+
+.ticker-item {
+  display: inline-block;
+  padding: 0 24px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translate(0, 0);
+  }
+  100% {
+    transform: translate(-100%, 0);
+  }
+}
+
+/* Infinite Store Logo Slider */
+.logo-slider-wrap {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.logo-slider-track {
+  display: flex;
+  gap: 1.5rem;
+  width: max-content;
+  animation: logoMarquee 25s linear infinite;
+}
+
+.logo-slider-wrap:hover .logo-slider-track {
+  animation-play-state: paused;
+}
+
+@keyframes logoMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Highlight ZZ styling */
+.highlight-zz {
+  color: #ff6b00 !important;
+  font-weight: 900;
+}
+
+/* Custom Scrollbar */
+.custom-scroll::-webkit-scrollbar {
+  width: 6px;
+}
+.custom-scroll::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+.custom-scroll::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}

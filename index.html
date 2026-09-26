@@ -1,0 +1,428 @@
+<!doctype html>
+<html lang="uz">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>
+      AI-BAZZAR — B2B Analitika va Narxlarni Solishtirish Platformasi
+    </title>
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              brandDark: "#0b1739",
+              brandBlue: "#1b2a4a",
+              brandOrange: "#ff6b00",
+              brandOrangeHover: "#e05e00",
+              brandGreen: "#10b981",
+              brandRed: "#ef4444",
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- FontAwesome Icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <!-- Chart.js Library -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <!-- Maxsus CSS Fayli -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body class="min-h-screen flex flex-col">
+    <!-- 1. REAL-TIME TICKER LENTA -->
+    <div class="ticker-wrap">
+      <div class="ticker" id="tickerContent">
+        <!-- JS orqali to'ldiriladi -->
+      </div>
+    </div>
+
+    <!-- MAIN NAVBAR -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-50 shadow-sm">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+        <!-- BRAND LOGO -->
+        <div class="flex items-center gap-3 cursor-pointer" id="brandLogo">
+          <div class="w-11 h-11 bg-brandDark text-white font-black text-xl flex items-center justify-center rounded-xl shadow-md">
+            AI
+          </div>
+          <div class="flex flex-col">
+            <span class="font-extrabold text-xl sm:text-2xl text-brandDark tracking-tight leading-none">
+              AI-BA<span class="highlight-zz">ZZ</span>AR
+            </span>
+            <span class="text-[10px] tracking-widest text-slate-500 font-bold uppercase mt-1">
+              B2B Market & Analytics
+            </span>
+          </div>
+        </div>
+
+        <!-- NAVIGATION LINKS -->
+        <nav class="hidden md:flex items-center gap-1 lg:gap-2">
+          <button id="navHome" class="nav-btn px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-2 bg-indigo-50 text-brandDark">
+            <i class="fa-solid fa-house text-indigo-600"></i> Bosh sahifa
+          </button>
+          <button id="navAnalytics" class="nav-btn px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-2 text-slate-700 hover:bg-slate-100">
+            <i class="fa-solid fa-chart-line text-slate-500"></i> Tahlil
+          </button>
+          <button id="navCatalog" class="nav-btn px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-2 text-slate-700 hover:bg-slate-100">
+            <i class="fa-solid fa-boxes-stacked text-slate-500"></i> Kataloglar
+          </button>
+          <button id="navMarkets" class="nav-btn px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-2 text-slate-700 hover:bg-slate-100">
+            <i class="fa-solid fa-store text-slate-500"></i> Bozorlar
+          </button>
+          <button id="navContact" class="nav-btn px-4 py-2 rounded-lg font-semibold text-sm transition-all duration-200 flex items-center gap-2 text-slate-700 hover:bg-slate-100">
+            <i class="fa-solid fa-handshake text-slate-500"></i> Aloqa & FAQ
+          </button>
+        </nav>
+
+        <!-- ACTION BUTTONS -->
+        <div class="flex items-center gap-3">
+          <button id="aiBtn" class="bg-indigo-600 hover:bg-indigo-700 text-white px-4 py-2.5 rounded-xl font-bold text-xs sm:text-sm transition-all flex items-center gap-2 shadow-md">
+            <i class="fa-solid fa-brain text-amber-300 text-base"></i>
+            <span>AI Solishtirish</span>
+          </button>
+        </div>
+      </div>
+
+      <!-- MOBILE NAV MENU -->
+      <div class="md:hidden flex border-t border-slate-200 bg-white justify-around py-2 px-1 text-xs font-medium">
+        <button id="mobNavHome" class="flex flex-col items-center gap-1 text-indigo-600 font-bold p-1">
+          <i class="fa-solid fa-house text-base"></i> Bosh sahifa
+        </button>
+        <button id="mobNavAnalytics" class="flex flex-col items-center gap-1 text-slate-600 p-1">
+          <i class="fa-solid fa-chart-line text-base"></i> Tahlil
+        </button>
+        <button id="mobNavCatalog" class="flex flex-col items-center gap-1 text-slate-600 p-1">
+          <i class="fa-solid fa-boxes-stacked text-base"></i> Katalog
+        </button>
+        <button id="mobNavMarkets" class="flex flex-col items-center gap-1 text-slate-600 p-1">
+          <i class="fa-solid fa-store text-base"></i> Bozorlar
+        </button>
+      </div>
+    </header>
+
+    <!-- HERO SEARCH BANNER -->
+    <section class="bg-gradient-to-r from-brandDark to-brandBlue text-white py-12 px-4 sm:px-6 relative">
+      <div class="max-w-4xl mx-auto text-center">
+        <h1 class="text-2xl sm:text-4xl font-extrabold tracking-tight mb-3">
+          Eng maqbul B2B narxni bir joydan toping
+        </h1>
+        <p class="text-slate-300 text-sm sm:text-base max-w-2xl mx-auto mb-8">
+          Uzum, Yandex, OLX, B2B Birja va hududiy yirik bozorlardagi narxlarni sun'iy intellekt orqali solishtiring.
+        </p>
+
+        <!-- SEARCH CONTAINER -->
+        <div class="relative max-w-3xl mx-auto text-left">
+          <div class="bg-white rounded-2xl p-2 shadow-2xl flex items-center border border-slate-200">
+            <i class="fa-solid fa-magnifying-glass text-slate-400 text-lg ml-3 mr-2"></i>
+            <input
+              type="text"
+              id="searchInput"
+              autocomplete="off"
+              placeholder="Mahsulot nomini kiriting (masalan: Dazmol, Un, Sement, Kir yuvish mashinasi, Notebook)..."
+              class="w-full py-3 px-2 text-slate-800 text-sm sm:text-base focus:outline-none placeholder:text-slate-400 font-medium"
+            />
+            <button id="searchBtn" class="bg-brandDark hover:bg-slate-800 text-white font-bold px-6 py-3.5 rounded-xl text-sm transition-all flex items-center gap-2 whitespace-nowrap shadow-md">
+              <span>Qidirish</span>
+              <i class="fa-solid fa-arrow-right text-xs"></i>
+            </button>
+          </div>
+
+          <!-- AUTOCOMPLETE DROPDOWN MENU -->
+          <div id="autocompleteDropdown" class="hidden absolute top-full left-0 right-0 mt-2 bg-white rounded-2xl shadow-2xl border border-slate-200 overflow-hidden z-50 max-h-80 overflow-y-auto custom-scroll">
+            <div class="p-2 text-xs font-semibold text-slate-400 uppercase tracking-wider bg-slate-50 border-b border-slate-100 flex justify-between items-center">
+              <span><i class="fa-solid fa-list-ul mr-1"></i> Taklif qilingan mahsulotlar</span>
+              <span class="text-[10px] text-indigo-600 bg-indigo-50 px-2 py-0.5 rounded-full font-bold">Avto-qidiruv</span>
+            </div>
+            <div id="autocompleteList" class="divide-y divide-slate-100">
+              <!-- JS orqali to'ldiriladi -->
+            </div>
+          </div>
+        </div>
+
+        <!-- QUICK STATS PILLS -->
+        <div class="flex flex-wrap justify-center gap-3 sm:gap-4 mt-8">
+          <div class="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs sm:text-sm font-medium flex items-center gap-2 border border-white/10">
+            <i class="fa-solid fa-circle-check text-emerald-400"></i>
+            <span>+10,000 B2B Mahsulot</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs sm:text-sm font-medium flex items-center gap-2 border border-white/10">
+            <i class="fa-solid fa-bolt text-amber-400"></i>
+            <span>Real-vaqt narx tahlili</span>
+          </div>
+          <div class="bg-white/10 backdrop-blur-md px-4 py-2 rounded-full text-xs sm:text-sm font-medium flex items-center gap-2 border border-white/10">
+            <i class="fa-solid fa-tags text-indigo-400"></i>
+            <span>AI Eng arzon taklif</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MAIN CONTENT CONTAINER -->
+    <main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-1 w-full">
+      <!-- BOSH SAHIFA SECTION -->
+      <section id="homeSection" class="mb-10 transition-all">
+        <!-- DO'KON LOGOLARI SLIDERI -->
+        <div class="mb-10">
+          <div class="flex items-center justify-between mb-4">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Integratsiyalar</span>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-800 mt-2">
+                Hamkor B2B Bozor va Do'konlar
+              </h2>
+            </div>
+            <span class="text-xs text-slate-400 font-medium hidden sm:inline">
+              <i class="fa-solid fa-circle-dot text-emerald-500 mr-1 animate-pulse"></i>
+              Real-vaqt ulanishi
+            </span>
+          </div>
+
+          <div class="logo-slider-wrap bg-white p-4 sm:p-6 rounded-2xl border border-slate-200 shadow-sm">
+            <div class="logo-slider-track" id="logoSliderTrack">
+              <!-- JS orqali to'ldiriladi -->
+            </div>
+          </div>
+        </div>
+
+        <!-- BOSH SAHIFA MAHSULOT KATALOGLARI -->
+        <div class="mb-8">
+          <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-4 mb-6">
+            <div>
+              <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Bosh Katalog</span>
+              <h2 class="text-xl sm:text-2xl font-black text-slate-800 mt-2">
+                Ulgurji Mahsulotlar Katalogi
+              </h2>
+              <p class="text-xs text-slate-500 mt-1">
+                O'zingizga kerakli mahsulotni tanlang va tugmani bosib narxlarni AI orqali solishtiring
+              </p>
+            </div>
+          </div>
+
+          <!-- TOIFA TUGMALARI -->
+          <div class="flex flex-wrap gap-2 mb-6" id="homeCategoryFilter">
+            <button onclick="filterHomeCategory('all')" class="home-cat-btn active bg-brandDark text-white px-4 py-2 rounded-xl text-xs font-bold transition">
+              Barchasi
+            </button>
+            <button onclick="filterHomeCategory('maishiy')" class="home-cat-btn bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2 rounded-xl text-xs font-bold transition">
+              <i class="fa-solid fa-plug text-indigo-500 mr-1"></i> Maishiy Texnika
+            </button>
+            <button onclick="filterHomeCategory('aksessuar')" class="home-cat-btn bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2 rounded-xl text-xs font-bold transition">
+              <i class="fa-solid fa-mobile-screen text-indigo-500 mr-1"></i> Smartfon & Aksessuarlar
+            </button>
+            <button onclick="filterHomeCategory('oziq-ovqat')" class="home-cat-btn bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2 rounded-xl text-xs font-bold transition">
+              <i class="fa-solid fa-wheat-awn text-amber-500 mr-1"></i> Oziq-ovqat
+            </button>
+            <button onclick="filterHomeCategory('qurilish')" class="home-cat-btn bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2 rounded-xl text-xs font-bold transition">
+              <i class="fa-solid fa-trowel-bricks text-emerald-500 mr-1"></i> Qurilish mollari
+            </button>
+            <button onclick="filterHomeCategory('elektronika')" class="home-cat-btn bg-white border border-slate-200 text-slate-700 hover:bg-slate-50 px-4 py-2 rounded-xl text-xs font-bold transition">
+              <i class="fa-solid fa-laptop text-blue-500 mr-1"></i> IT & Elektronika
+            </button>
+          </div>
+
+          <!-- MAHSULOT CARDRALARI GRID -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6" id="homeProductsGrid">
+            <!-- JS orqali to'ldiriladi -->
+          </div>
+        </div>
+      </section>
+
+      <!-- SEARCH & COMPARISON RESULTS SECTION -->
+      <section id="resultsSection" class="hidden mb-10 transition-all duration-300">
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between mb-6 pb-4 border-b border-slate-200 gap-2">
+          <div>
+            <span class="text-xs font-bold uppercase tracking-wider text-indigo-600 bg-indigo-50 px-3 py-1 rounded-full">Solishtirish natijasi</span>
+            <h2 class="text-xl sm:text-2xl font-bold text-slate-800 mt-2">
+              <span id="searchQueryTitle">"Dazmol"</span> bo'yicha platformalar narxi
+            </h2>
+          </div>
+          <div class="text-xs text-slate-500 bg-white px-3 py-2 rounded-lg border border-slate-200 flex items-center gap-2 shadow-sm">
+            <i class="fa-solid fa-robot text-indigo-500 text-sm"></i>
+            <span>AI Algoritm: Eng optimal B2B narx ajratildi</span>
+          </div>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6" id="comparisonContainer">
+          <!-- JS orqali to'ldiriladi -->
+        </div>
+      </section>
+
+      <!-- DYNAMIC VIEW SECTION -->
+      <section id="dynamicViewSection" class="hidden bg-white rounded-2xl p-6 sm:p-8 border border-slate-200 shadow-sm mb-10 transition-all">
+        <!-- JS orqali kontent joylashtiriladi -->
+      </section>
+
+      <!-- B2B ANALYTICS & CALCULATOR SECTION -->
+      <section id="analyticsSection" class="hidden grid grid-cols-1 lg:grid-cols-3 gap-8">
+        <div class="lg:col-span-2 bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex flex-col sm:flex-row items-start sm:items-center gap-5 pb-6 border-b border-slate-100">
+              <img
+                id="activeProductImg"
+                src="https://stat.uz/img/chorak_natijalar/un_p47729.jpg"
+                alt="Mahsulot"
+                class="w-24 h-24 object-cover rounded-xl border border-slate-100 shadow-sm"
+              />
+              <div class="flex-1">
+                <div class="inline-flex items-center gap-1.5 bg-emerald-50 text-emerald-700 text-xs font-bold px-2.5 py-1 rounded-md mb-2">
+                  <i class="fa-solid fa-shield-halved"></i> Tasdiqlangan B2B Ta'minotchi
+                </div>
+                <h2 id="activeProductName" class="text-xl sm:text-2xl font-bold text-slate-900 leading-tight">
+                  Un (Qozoq un 1-nav, 50kg)
+                </h2>
+                <p id="activeSupplierInfo" class="text-xs sm:text-sm text-slate-500 mt-1 flex items-center gap-2">
+                  <i class="fa-solid fa-building text-slate-400"></i>
+                  "O'zDonMahsulot" AJ | Tashkent B2B Hub
+                </p>
+              </div>
+              <div class="bg-slate-50 p-3 rounded-xl border border-slate-100 text-right w-full sm:w-auto">
+                <div class="text-[11px] text-slate-400 font-semibold uppercase">
+                  Eng oxirgi birja narxi
+                </div>
+                <div id="activeMainPrice" class="text-xl font-black text-emerald-600 mt-0.5">
+                  235,000 UZS
+                </div>
+              </div>
+            </div>
+
+            <!-- GRAPH CONTROLS -->
+            <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center my-6 gap-4">
+              <div>
+                <h3 class="font-bold text-slate-800 text-base">
+                  Dinamik Birja va Bozor Grafigi
+                </h3>
+                <p class="text-xs text-slate-400">
+                  Narxlarning vaqt bo'yicha o'zgarish dinamikasi
+                </p>
+              </div>
+              <div class="flex items-center bg-slate-100 p-1 rounded-lg text-xs font-bold">
+                <button class="px-3 py-1.5 rounded-md bg-brandDark text-white shadow-xs">24S</button>
+                <button class="px-3 py-1.5 rounded-md text-slate-600 hover:text-slate-900">1H</button>
+                <button class="px-3 py-1.5 rounded-md text-slate-600 hover:text-slate-900">1O</button>
+                <button class="px-3 py-1.5 rounded-md text-slate-600 hover:text-slate-900">1Y</button>
+              </div>
+            </div>
+
+            <!-- CHART WRAPPER -->
+            <div class="h-64 sm:h-72 w-full">
+              <canvas id="marketChart"></canvas>
+            </div>
+          </div>
+
+          <div class="mt-6 pt-4 border-t border-slate-100 flex items-center justify-between text-xs text-slate-500">
+            <span><i class="fa-solid fa-arrows-rotate text-indigo-500 mr-1"></i> Real-vaqt ma'lumotlari yangilandi</span>
+            <span id="chartMinMax" class="font-medium text-slate-700">Min: 235,000 UZS | Max: 250,000 UZS</span>
+          </div>
+        </div>
+
+        <!-- RIGHT 1 COL: B2B CALCULATOR -->
+        <div class="bg-white rounded-2xl p-6 border border-slate-200 shadow-sm flex flex-col justify-between">
+          <div>
+            <div class="flex items-center justify-between pb-4 border-b border-slate-100 mb-5">
+              <h3 class="font-bold text-slate-800 text-base flex items-center gap-2">
+                <i class="fa-solid fa-calculator text-indigo-600"></i> B2B Xarid Kalkulyatori
+              </h3>
+              <span class="text-[10px] bg-slate-100 text-slate-600 font-bold px-2 py-0.5 rounded">Avto-Hisob</span>
+            </div>
+
+            <div class="grid grid-cols-2 gap-2 mb-5">
+              <button id="btnTabBuy" class="py-2 px-3 rounded-lg text-xs font-bold bg-brandDark text-white transition-all text-center">
+                Xarid qilish
+              </button>
+              <button id="btnTabLogistics" class="py-2 px-3 rounded-lg text-xs font-bold bg-slate-100 text-slate-600 hover:bg-slate-200 transition-all text-center">
+                Logistika
+              </button>
+            </div>
+
+            <div class="space-y-4">
+              <div>
+                <label class="block text-xs font-semibold text-slate-600 mb-1">Xarid hajmi (Birlik/Tonna/Qop):</label>
+                <div class="relative">
+                  <input
+                    type="number"
+                    id="calcQuantity"
+                    value="10"
+                    min="1"
+                    class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm text-slate-800 font-bold focus:outline-none focus:border-indigo-500"
+                  />
+                  <span class="absolute right-3 top-2.5 text-xs text-slate-400 font-medium">dona/tonna</span>
+                </div>
+              </div>
+
+              <div>
+                <label class="block text-xs font-semibold text-slate-600 mb-1">Birlik narxi (UZS):</label>
+                <input
+                  type="number"
+                  id="calcUnitPrice"
+                  value="235000"
+                  class="w-full bg-slate-50 border border-slate-200 rounded-lg py-2.5 px-3 text-sm text-slate-800 font-bold focus:outline-none focus:border-indigo-500"
+                />
+              </div>
+
+              <div class="flex items-center gap-2 pt-1">
+                <input
+                  type="checkbox"
+                  id="calcVatCheck"
+                  checked
+                  class="w-4 h-4 text-indigo-600 rounded border-slate-300 focus:ring-indigo-500 cursor-pointer"
+                />
+                <label for="calcVatCheck" class="text-xs font-medium text-slate-700 cursor-pointer select-none">
+                  QQS kiritilgan (12% hisoblansin)
+                </label>
+              </div>
+            </div>
+
+            <div class="bg-slate-50 rounded-xl p-4 my-5 border border-slate-200/80 space-y-2.5 text-xs">
+              <div class="flex justify-between text-slate-600">
+                <span>Sof mahsulot qiymati:</span>
+                <span id="resBase" class="font-bold text-slate-800">0 UZS</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>QQS summasi (12%):</span>
+                <span id="resVat" class="font-bold text-slate-800">0 UZS</span>
+              </div>
+              <div class="flex justify-between text-slate-600">
+                <span>Yetkazib berish (Est):</span>
+                <span id="resDelivery" class="font-bold text-slate-800">0 UZS</span>
+              </div>
+              <div class="border-t border-slate-200 pt-2 flex justify-between items-center text-sm">
+                <span class="font-bold text-slate-900">Jami B2B summasi:</span>
+                <strong id="resTotal" class="text-base font-black text-brandDark">0 UZS</strong>
+              </div>
+            </div>
+          </div>
+
+          <button id="orderBtn" class="w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-3.5 px-4 rounded-xl text-sm transition-all shadow-md flex items-center justify-center gap-2">
+            <i class="fa-solid fa-paper-plane"></i>
+            <span>B2B Buyurtma Yaratish</span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-brandDark text-white border-t border-slate-800 mt-auto py-8">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
+        <div class="flex items-center gap-2">
+          <span class="font-extrabold text-white text-base tracking-tight">AI-BA<span class="highlight-zz">ZZ</span>AR</span>
+          <span>&copy; 2026 B2B Platforma. Barcha huquqlar himoyalangan.</span>
+        </div>
+        <div class="flex gap-6">
+          <a href="#" class="hover:text-white transition">Maxfiylik Siyosati</a>
+          <a href="#" class="hover:text-white transition">Foydalanish Shartlari</a>
+          <a href="#" class="hover:text-white transition">API Hujjatlar</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Maxsus JS Fayli -->
+    <script src="js/app.js"></script>
+  </body>
+</html>

@@ -1,0 +1,561 @@
+{
+  "products": [
+    {
+      "id": "dazmol",
+      "category": "maishiy",
+      "name": "Philips DST3010 Bug'li Dazmol",
+      "keywords": [
+        "dazmol",
+        "daz",
+        "philips",
+        "bugli dazmol",
+        "iron"
+      ],
+      "image": "https://castore.uz/upload/resize_cache/iblock/02c/ssx8copidfhopot9qak6y9ujj3ycc9yu/264_190_1/parovoy-utyug-braun-si1080vi-1.jpg",
+      "unitPrice": 312000,
+      "supplier": "TexnoTrade B2B Distribyutor",
+      "sources": [
+        {
+          "platform": "Uzum Market",
+          "price": 312000,
+          "desc": "Philips DST3010, 2000W bug'li",
+          "best": true,
+          "rating": "4.9"
+        },
+        {
+          "platform": "Yandex Market",
+          "price": 334500,
+          "desc": "Philips DST3010, kafolatli",
+          "best": false,
+          "rating": "4.7"
+        },
+        {
+          "platform": "OLX Biznes",
+          "price": 341000,
+          "desc": "Philips DST3010 (Optom min 5 dona)",
+          "best": false,
+          "rating": "4.5"
+        }
+      ],
+      "chartData": [
+        340000,
+        335000,
+        328000,
+        325000,
+        312000
+      ]
+    },
+    {
+      "id": "un",
+      "category": "oziq-ovqat",
+      "name": "Un (Qozoq un 1-nav, 50kg qop)",
+      "keywords": [
+        "un",
+        "qozoq un",
+        "oq un",
+        "flour",
+        "50kg"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQCEnV4yv2ZFP2nh-zWYj75McQt266MWxSZASeTJSSN04s8mFD8L5D6Y0LS&s=10",
+      "unitPrice": 235000,
+      "supplier": "O'zDonMahsulot AJ",
+      "sources": [
+        {
+          "platform": "O'zRTXB B2B Birja",
+          "price": 235000,
+          "desc": "Ulgurji birja narxi (Min 5 tonna)",
+          "best": true,
+          "rating": "5.0"
+        },
+        {
+          "platform": "OLX Biznes",
+          "price": 242000,
+          "desc": "Toshkent omboridan yetkazish",
+          "best": false,
+          "rating": "4.6"
+        },
+        {
+          "platform": "Uzum Market",
+          "price": 250000,
+          "desc": "Chakana va optom qadoq",
+          "best": false,
+          "rating": "4.8"
+        }
+      ],
+      "chartData": [
+        250000,
+        248000,
+        242000,
+        238000,
+        235000
+      ]
+    },
+    {
+      "id": "sement",
+      "category": "qurilish",
+      "name": "Sement M400 (Qopda 50kg)",
+      "keywords": [
+        "sement",
+        "sem",
+        "m400",
+        "qurilish",
+        "cement"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQgV_04U4RCATy8eRRpRhoOEpWISAE4rAUVO6VKpbBho2ugLXJ29wwAPi8&s=10",
+      "unitPrice": 54000,
+      "supplier": "Qizilqum Sement Zavodi",
+      "sources": [
+        {
+          "platform": "AI-BAZZAR Direct Birja",
+          "price": 54000,
+          "desc": "Zavoddan to'g'ridan-to'g'ri yuklash",
+          "best": true,
+          "rating": "4.9"
+        },
+        {
+          "platform": "Bek Topo B2B Market",
+          "price": 57000,
+          "desc": "Toshkent halqa yo'li ombori",
+          "best": false,
+          "rating": "4.5"
+        },
+        {
+          "platform": "Yandex Market",
+          "price": 61000,
+          "desc": "Yetkazib berish bilan",
+          "best": false,
+          "rating": "4.3"
+        }
+      ],
+      "chartData": [
+        60000,
+        59000,
+        57000,
+        55000,
+        54000
+      ]
+    },
+    {
+      "id": "shakar",
+      "category": "oziq-ovqat",
+      "name": "Shakar (Xorazm Shakar 50kg qop)",
+      "keywords": [
+        "shakar",
+        "sha",
+        "sugar",
+        "xorazm shakar"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR4Hfrf6p38xMiEinToa0-hoV6376NtcDr85clOyRKApA&s",
+      "unitPrice": 620000,
+      "supplier": "Xorazm Shakar MCHJ",
+      "sources": [
+        {
+          "platform": "O'zRTXB Birja",
+          "price": 620000,
+          "desc": "Ulgurji shartnoma (1 tonna)",
+          "best": true,
+          "rating": "5.0"
+        },
+        {
+          "platform": "Uzum Market",
+          "price": 645000,
+          "desc": "Ombor rasmiy sotuvi",
+          "best": false,
+          "rating": "4.7"
+        },
+        {
+          "platform": "OLX Biznes",
+          "price": 650000,
+          "desc": "Optom narx yetkazib berishiz",
+          "best": false,
+          "rating": "4.2"
+        }
+      ],
+      "chartData": [
+        660000,
+        650000,
+        640000,
+        630000,
+        620000
+      ]
+    },
+    {
+      "id": "kir-yuvish",
+      "category": "maishiy",
+      "name": "LG Inverter Kir Yuvish Mashinasi 7kg",
+      "keywords": [
+        "kir yuvish",
+        "kir",
+        "lg",
+        "mashina",
+        "washing machine"
+      ],
+      "image": "https://images.unsplash.com/photo-1626806787461-102c1bfaaea1?w=500&auto=format&fit=crop&q=80",
+      "unitPrice": 4250000,
+      "supplier": "LG Electronics Uzbekistan",
+      "sources": [
+        {
+          "platform": "Yandex Market",
+          "price": 4250000,
+          "desc": "Inverter Direct Drive, 7kg",
+          "best": true,
+          "rating": "4.9"
+        },
+        {
+          "platform": "Uzum Market",
+          "price": 4390000,
+          "desc": "Rasmiy 3 yil kafolat",
+          "best": false,
+          "rating": "4.8"
+        },
+        {
+          "platform": "Abu Saxiy B2B",
+          "price": 4450000,
+          "desc": "Ulgurji savdo do'koni",
+          "best": false,
+          "rating": "4.6"
+        }
+      ],
+      "chartData": [
+        4600000,
+        4500000,
+        4400000,
+        4300000,
+        4250000
+      ]
+    },
+    {
+      "id": "notebook",
+      "category": "elektronika",
+      "name": "Lenovo IdeaPad 3 Core i5 16GB RAM",
+      "keywords": [
+        "notebook",
+        "notebuk",
+        "lenovo",
+        "noutbuk",
+        "laptop",
+        "kompyuter"
+      ],
+      "image": "https://images.unsplash.com/photo-1588872657578-7efd1f1555ed?w=500&auto=format&fit=crop&q=80",
+      "unitPrice": 6100000,
+      "supplier": "Malika IT Hub B2B",
+      "sources": [
+        {
+          "platform": "Malika Texnomarket",
+          "price": 6100000,
+          "desc": "Direct importer (Optom)",
+          "best": true,
+          "rating": "4.9"
+        },
+        {
+          "platform": "Uzum Market",
+          "price": 6350000,
+          "desc": "Rasmiy kafolat bilan",
+          "best": false,
+          "rating": "4.7"
+        },
+        {
+          "platform": "Yandex Market",
+          "price": 6400000,
+          "desc": "Kuryerlik xizmati ichida",
+          "best": false,
+          "rating": "4.5"
+        }
+      ],
+      "chartData": [
+        6500000,
+        6400000,
+        6300000,
+        6200000,
+        6100000
+      ]
+    },
+    {
+      "id": "fen",
+      "category": "maishiy",
+      "name": "Dyson Supersonic Soch Feni (B2B Pack)",
+      "keywords": [
+        "fen",
+        "fe",
+        "dyson",
+        "soch feni",
+        "hair dryer"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRWorIlWE3YOqdVMgJr63whyXPcciFjpHVpKieO0gpIneiIrKccoOWM6D6K&s=10",
+      "unitPrice": 4800000,
+      "supplier": "VIP Electronics B2B",
+      "sources": [
+        {
+          "platform": "Uzum Market",
+          "price": 4800000,
+          "desc": "Original 100% kafolat",
+          "best": true,
+          "rating": "5.0"
+        },
+        {
+          "platform": "OLX Biznes",
+          "price": 4950000,
+          "desc": "Ulgurji partiya",
+          "best": false,
+          "rating": "4.4"
+        },
+        {
+          "platform": "Yandex Market",
+          "price": 5100000,
+          "desc": "Ekspress yetkazish",
+          "best": false,
+          "rating": "4.6"
+        }
+      ],
+      "chartData": [
+        5200000,
+        5100000,
+        5000000,
+        4900000,
+        4800000
+      ]
+    },
+    {
+      "id": "mikrotolqinli",
+      "category": "maishiy",
+      "name": "Samsung Mikrotolqinli Pech 23L",
+      "keywords": [
+        "mikrotolqinli",
+        "mikro",
+        "pech",
+        "samsung",
+        "microwave"
+      ],
+      "image": "https://images.unsplash.com/photo-1574269909862-7e1d70bb8078?w=500&auto=format&fit=crop&q=80",
+      "unitPrice": 1250000,
+      "supplier": "Samsung B2B Official",
+      "sources": [
+        {
+          "platform": "Yandex Market",
+          "price": 1250000,
+          "desc": "Grill funksiyali 23L",
+          "best": true,
+          "rating": "4.8"
+        },
+        {
+          "platform": "Uzum Market",
+          "price": 1320000,
+          "desc": "Biokeramika qoplamali",
+          "best": false,
+          "rating": "4.7"
+        },
+        {
+          "platform": "Abu Saxiy B2B",
+          "price": 1350000,
+          "desc": "Optom narx",
+          "best": false,
+          "rating": "4.3"
+        }
+      ],
+      "chartData": [
+        1400000,
+        1350000,
+        1300000,
+        1280000,
+        1250000
+      ]
+    },
+    {
+      "id": "telefon",
+      "category": "aksessuar",
+      "name": "Samsung Galaxy A54 8/256GB",
+      "keywords": [
+        "telefon",
+        "tel",
+        "samsung",
+        "galaxy",
+        "a54",
+        "phone"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcThx2Lbe7mre-i_fFSHjFqhZ5XV9zRW8nO4wh-MZqkfBfTAWF-hx0xO60o&s=10",
+      "unitPrice": 3850000,
+      "supplier": "Mobile Distribution B2B",
+      "sources": [
+        {
+          "platform": "Malika Texnomarket",
+          "price": 3850000,
+          "desc": "Kafolatli optom distribyutsiya",
+          "best": true,
+          "rating": "4.9"
+        },
+        {
+          "platform": "Uzum Market",
+          "price": 3990000,
+          "desc": "Rasmiy do'kon narxi",
+          "best": false,
+          "rating": "4.8"
+        },
+        {
+          "platform": "OLX Biznes",
+          "price": 4050000,
+          "desc": "Yangi qadoqda",
+          "best": false,
+          "rating": "4.5"
+        }
+      ],
+      "chartData": [
+        4200000,
+        4100000,
+        4000000,
+        3900000,
+        3850000
+      ]
+    },
+    {
+      "id": "armatura",
+      "category": "qurilish",
+      "name": "Temir Armatura d12 (Tonna)",
+      "keywords": [
+        "armatura",
+        "arm",
+        "temir",
+        "qurilish",
+        "d12"
+      ],
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCVlMovplOIaTOVTl1g19g2HKyM5jJ3kte7H6dXFsV0w&s",
+      "unitPrice": 8900000,
+      "supplier": "Uzbekistan Metallurgy Complex",
+      "sources": [
+        {
+          "platform": "O'zRTXB B2B Birja",
+          "price": 8900000,
+          "desc": "Bekobod metallurgiya zavodi direct",
+          "best": true,
+          "rating": "5.0"
+        },
+        {
+          "platform": "Bek Topo B2B",
+          "price": 9200000,
+          "desc": "Tayyor tayanch ombori",
+          "best": false,
+          "rating": "4.6"
+        },
+        {
+          "platform": "OLX Biznes",
+          "price": 9350000,
+          "desc": "Yetkazib berish xizmati bilan",
+          "best": false,
+          "rating": "4.3"
+        }
+      ],
+      "chartData": [
+        9500000,
+        9300000,
+        9100000,
+        9000000,
+        8900000
+      ]
+    }
+  ],
+  "markets": [
+    {
+      "name": "Uzum Market B2B",
+      "category": "E-Commerce / B2B Hub",
+      "location": "Toshkent sh., Yashnobod tumani",
+      "owner": "Uzum Group MCHJ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLjXpR68RS14SdqvI8IO81lHzhCNZqu0lkbs5qntqvqQ&s=10",
+      "rating": "4.9",
+      "verified": true,
+      "desc": "O'zbekistondagi eng yirik milliy marketpleys va B2B ulgurji yetkazib berish tarmog'i.",
+      "specs": "Maishiy texnika, Elektronika, Oziq-ovqat"
+    },
+    {
+      "name": "Yandex Market Uzbekistan",
+      "category": "Xalqaro Marketpleys",
+      "location": "Toshkent sh., Mirobod tumani",
+      "owner": "Yandex Go B2B LLC",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS_IJXyuhrv8qJBhB1wYO2jf62B-_XlJge1yyyE9q1N9RxU7npzTgaMgcA&s=10",
+      "rating": "4.8",
+      "verified": true,
+      "desc": "Tezkor ekspress va ulgurji yetkazib berish logistika infratuzilmasi.",
+      "specs": "Kichik va yirik maishiy texnika, Aksessuarlar"
+    },
+    {
+      "name": "OLX Biznes Uzbekistan",
+      "category": "B2B E'lonlar va Optom Platforma",
+      "location": "O'zbekiston bo'ylab barcha viloyatlar",
+      "owner": "OLX Classifieds MCHJ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTlPZW-CoX-h2UK63sYMkBeiDcw2qw9BTg7a43sixgDGvXIK__NXVQ8ujKX&s=10s",
+      "rating": "4.6",
+      "verified": true,
+      "desc": "Minglab bevosita ishlab chiqaruvchilar va distribyutorlarning B2B do'konlari.",
+      "specs": "Qurilish mollari, Qishloq xo'jaligi, Uskunalar"
+    },
+    {
+      "name": "O'zRTXB Respublika Birjasi",
+      "category": "Davlat va Korporativ Birja",
+      "location": "Toshkent sh., Rustaveli ko'chasi 19",
+      "owner": "O'zbekiston Respublika Tovar-Xomashyo Birjasi AJ",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSGVVPRJ6bVhI7rMK2DSSiufLUJ4r9ytwSQsEYwKGmuVfM-fi8X8mTiDS0&s=10",
+      "rating": "5.0",
+      "verified": true,
+      "desc": "G'alla, un, sement, metall va yonilg'i mahsulotlarining rasmiy ulgurji birjasi.",
+      "specs": "Un, Sement, Armatura, Shakar, Yoqilg'i"
+    },
+    {
+      "name": "Abu Saxiy B2B Savdo Majmuasi",
+      "category": "Yirik Ulgurji Bozor",
+      "location": "Toshkent sh., Chilonzor tumani",
+      "owner": "Abu Saxiy Kompleks",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQtjK30uXpaY4RHdZUdcwS7LtTF_NfUgIFWWCrDEGvobuaGRCcaZBW0d-o&s=10",
+      "rating": "4.7",
+      "verified": true,
+      "desc": "Xitoy va Turkiyadan import qilinadigan maishiy va toqimachilik mahsulotlari markazi.",
+      "specs": "Maishiy texnika, Aksessuarlar, Kiyim-kechak"
+    },
+    {
+      "name": "Malika (Sheroziy) Texnomarket",
+      "category": "Elektronika va IT Hub",
+      "location": "Toshkent sh., Shayxontohur tumani",
+      "owner": "Malika IT Center MCHJ",
+      "image": "https://static-pano.maps.yandex.ru/v1/?panoid=1486963471_803972125_23_1779599079&size=500%2C240&azimuth=-137.1&tilt=10&api_key=maps&signature=s2iQTu3uQ6vRWDLALia2PZIv7F1yfBJDVDFxgy8tuLk=",
+      "rating": "4.9",
+      "verified": true,
+      "desc": "Smartfonlar, noutbuklar va gadjetlarning markaziy ulgurji do'konlar tarmog'i.",
+      "specs": "Smartfon, Noutbuk, Aksessuar, Kompyuterlar"
+    }
+  ],
+  "ticker": [
+    {
+      "name": "Un (Qozoq 1-nav)",
+      "price": "4,950 UZS/kg",
+      "change": "+0.5%",
+      "up": true
+    },
+    {
+      "name": "Sement M400",
+      "price": "54,000 UZS/qop",
+      "change": "-1.2%",
+      "up": false
+    },
+    {
+      "name": "Shakar (Xorazm)",
+      "price": "12,400 UZS/kg",
+      "change": "+0.3%",
+      "up": true
+    },
+    {
+      "name": "Temir Armatura d12",
+      "price": "8,900,000 UZS/tn",
+      "change": "-0.8%",
+      "up": false
+    },
+    {
+      "name": "Philips Dazmol DST3010",
+      "price": "312,000 UZS",
+      "change": "-2.1%",
+      "up": false
+    },
+    {
+      "name": "LG Kir yuvish 7kg",
+      "price": "4,250,000 UZS",
+      "change": "+1.1%",
+      "up": true
+    }
+  ]
+}

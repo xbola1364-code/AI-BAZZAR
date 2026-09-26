@@ -1,0 +1,4 @@
+data/*.sqlite*
+.env
+sources.local.json
+node_modules/
